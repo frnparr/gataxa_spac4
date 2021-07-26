@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+        <a-assets>
+            <a-asset-item id="explorer" src="/assets/explo.gltf"></a-asset-item>
+            <a-asset-item id="corazon" src="/assets/corazon.gltf"></a-asset-item>
+            <a-asset-item id="team" src="/assets/team.gltf"></a-asset-item>
+            <a-asset-item id="plant" src="/assets/plant.gltf"></a-asset-item>
+            <img id="geomapa" src="geo.jpg">
+            <img id="geofoto" src="geofoto.jpg">
+           
+
+            <img id="sky" src="cerri4.png">
+        </a-assets>
+        
+        <a-entity gltf-model="#plant" position="0 9.81 100"></a-entity>
+        <a-entity gltf-model="/assets/explo.gltf" position="287.58038 48.6994 -366.91413" scale="2 2 1"></a-entity>
+        <a-entity gltf-model="/assets/plant.gltf" position="-375.67876 -79.34574 -289.7648" scale="15 15 3" rotation="-20 110 25"></a-entity>  
+          <a-entity gltf-model="/assets/team.gltf" position="499.05768 115.00675 168.63011" scale="2 2 1"></a-entity>
+
+  
+    
+    <a-image src="#geomapa" material="" geometry="" scale="-350 300 120" position="494.60477 -32.49497 -62.33677" rotation="0 50 0"></a-image>    <a-entity light="type: ambient; color: #BBB"></a-entity>
+    <a-entity light="type: directional; color: #FFF; intensity: 0.6" position="-0.5 1 1"></a-entity>
+    <a-entity light="type: ambient; color: #CCC"></a-entity>
+    <a-entity light="intensity: 0.6" position="1.16044 1 1"></a-entity>
+    <a-entity light="intensity: 0.6" position="1.16044 1 1"></a-entity> 
+
+    <a-sound src="src: url(audio.mp4)" autoplay="true" position="0 2 5"></a-sound>
+
+
+
+    <a-sky src="#sky" material="" geometry="" scale="1.2 0.9 1.2" visible=""></a-sky>
+        <a-entity camera="" position="6.450619560861935 1.6 125.35165021237647" wasd-controls="acceleration:  100" rotation="-15.355268909506064 128.9155039044352 0" look-controls="" aframe-injected="" data-aframe-inspector-original-camera=""></a-entity>
+      <a-sky src="#sky"></a-sky>
+    </a-scene>
+  </body>
+</html>
+
