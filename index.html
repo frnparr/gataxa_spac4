@@ -7,12 +7,49 @@
      
   </head>
   <body>
-   { 
-    \Alert: :info(“ muevete por el espacio usando las teclas W A S D o las fechas de dirección”);
-
-return view(“test”);
-}
-
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+        body {    font-family: 'Roboto Slab', serif;}
+        
+        /* The Modal (background) */
+        .modal {
+          position: fixed; /* Stay in place */
+          z-index: 1; /* Sit on top */
+          padding-top: 100px; /* Location of the box */
+          left: 0;
+          top: 0;
+          width: 100%; /* Full width */
+          height: 100%; /* Full height */
+          overflow: auto; /* Enable scroll if needed */
+          background-color: rgb(0,0,0);/* Fallback color */
+          background-color: rgba(46, 2, 24, 0.8); /* Black w/ opacity */
+        }
+        
+        /* Modal Content */
+        .modal-content {
+          background-color: #000000;
+          color: aliceblue;
+          margin: auto;
+          padding: 20px;
+          border: 1px solid rgb(48, 3, 22);
+          width: 80%;
+        }
+        
+        /* The Close Button */
+        .close {
+          color: #aaaaaa;
+          float: right;
+          font-size: 28px;
+          font-weight: bold;
+        }
+        
+        .close:hover,
+        .close:focus {
+          color: #000;
+          text-decoration: none;
+          cursor: pointer;
+        }
+        </style>
     
     <a-scene>
        <body style="background-color#000000;">
@@ -51,8 +88,40 @@ return view(“test”);
         <a-entity camera="" position="6.450619560861935 1.6 125.35165021237647" wasd-controls="acceleration:  1001" rotation="-15.355268909506064 128.9155039044352 0" look-controls="" aframe-injected="" data-aframe-inspector-original-camera=""></a-entity>
       <a-sky src="#sky"></a-sky>
     </a-scene>
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/3rayrnys2Nk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-   
+                       
+        <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p>Usa los botones w a s d o las flechas para moverte en el espacio y usa audífonos para maximizar la experiencia.</p>
+    </div>
+  
+  </div>
+  
+  <script>
+  // Get the modal
+  var modal = document.getElementById("myModal");
+  
+  
+  
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+  
+  
+  
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+  
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+  </script>                
                        
                        
   </body>
